@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+</head>
+<body>
+    <h1>Twitter Trends</h1>
+    <button onclick="fetchTrends()">Get Latest Trends</button>
+    <div id="results"></div>
+
+    <script>
+        function fetchTrends() {
+            fetch('/run_script')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = `
+                        <p>Unique ID: ${data.unique_id}</p>
+                        <p>Trend 1: ${data.trend1}</p>
+                        <p>Trend 2: ${data.trend2}</p>
+                        <p>Trend 3: ${data.trend3}</p>
+                        <p>Trend 4: ${data.trend4}</p>
+                        <p>Trend 5: ${data.trend5}</p>
+                        <p>Date Time: ${data.date_time}</p>
+                        <p>IP Address: ${data.ip_address}</p>
+                    `;
+                });
+        }
+    </script>
+</body>
+</html>
