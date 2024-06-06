@@ -37,18 +37,13 @@ def run_script():
     if collection.count_documents({}) > 0:
         result = result[0]
     else:
-        result = {}  # Handle the case where no documents are found
+        result = {} 
 
 # Check if 'unique_id' key exists in result dictionary
     if 'unique_id' in result:
         unique_id = result['unique_id']
     else:
-        unique_id = None  # or any default value you want to assign
-
-# Alternatively, you can use the get() method with a default value
-# unique_id = result.get('unique_id', None)
-  # Handle the case where no documents are found
-
+        unique_id = None  
 
     return jsonify({
         'unique_id': result['unique_id'],
