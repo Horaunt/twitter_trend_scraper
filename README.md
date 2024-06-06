@@ -61,7 +61,7 @@ This project is a web scraper that logs into Twitter (now known as X), fetches t
 
 7. **Update Twitter Credentials:**
 
-    Replace `YOUR_TWITTER_USERNAME` and `YOUR_TWITTER_PASSWORD` in the script with your Twitter login credentials.
+    Replace `YOUR_TWITTER_USERNAME` and `YOUR_TWITTER_PASSWORD` in the cred.py file with your Twitter login credentials.
 
 ## Running the Scraper
 
@@ -86,7 +86,7 @@ You can obtain the MongoDB URI from the MongoDB Atlas website if you are using M
 
 ### Twitter (X) Login
 
-Make sure to update the Twitter username and password in the script.
+Make sure to update the Twitter username and password in the cred.py file.
 
 ### Proxy Configuration
 

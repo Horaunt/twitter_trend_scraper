@@ -6,6 +6,7 @@ from pymongo import MongoClient
 from datetime import datetime, timezone
 import uuid
 import requests
+import cred
 
 
 # proxy = "http://Horaunt:Barsati@19@us-wa.proxymesh.com:31280"
@@ -19,11 +20,11 @@ time.sleep(5)
 
 
 username = driver.find_element(By.NAME, 'text')
-username.send_keys('YOUR_USERNAME')
+username.send_keys(cred.tusername)
 username.send_keys(Keys.RETURN)
 time.sleep(5)
 password = driver.find_element(By.NAME, 'password')
-password.send_keys('YOUR_PASSWORD')
+password.send_keys(cred.tpassword)
 password.send_keys(Keys.RETURN)
 
 
@@ -31,7 +32,7 @@ time.sleep(5)
 
 
 driver.get('https://x.com/explore/tabs/keyword')
-time.sleep(10)  
+time.sleep(6)  
 
 
 trend1 = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/main/div/div/div/div[1]/div/div[3]/div/section/div/div/div[4]/div/div/div/div/div[2]")
